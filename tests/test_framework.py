@@ -1,7 +1,7 @@
 import unittest
-from abm_framework.abm.agent import AgenteBase
-from abm_framework.abm.world import MundoBase
-from abm_framework.abm.simulation import Simulacao
+from abm.agent import AgenteBase
+from abm.world import MundoBase
+from abm.simulation import Simulacao
 import os
 import json
 

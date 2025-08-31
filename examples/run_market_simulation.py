@@ -1,5 +1,5 @@
-from abm_framework.abm.simulation import Simulacao
-from abm_framework.examples.market_example import AgenteFinanceiro, MundoMercado
+from abm.simulation import Simulacao
+from market_example import AgenteFinanceiro, MundoMercado
 
 """
 Exemplo de uso do framework ABM para simulação de mercado financeiro.
@@ -29,7 +29,7 @@ def main():
     
     print("\nSimulação concluída!")
     print(f"Preço final: {mundo.preco_atual:.2f}")
-    print(f"Resultados exportados para: resultados.json")
+    print("Resultados exportados para: resultados.json")
 
 if __name__ == "__main__":
     main()

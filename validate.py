@@ -1,5 +1,5 @@
-from abm_framework.examples.market_example import AgenteFinanceiro, MundoMercado
-from abm_framework.abm.simulation import Simulacao
+from examples.market_example import AgenteFinanceiro, MundoMercado
+from abm.simulation import Simulacao
 import unittest
 import sys
 import os
@@ -48,7 +48,7 @@ def executar_exemplo_mercado():
     simulacao.executar()
     
     print(f"Preço final: {mundo.preco_atual:.2f}")
-    print(f"Resultados exportados para: resultados.json")
+    print("Resultados exportados para: resultados.json")
     
     # Verifica se o arquivo de resultados foi criado
     return os.path.exists("resultados.json")

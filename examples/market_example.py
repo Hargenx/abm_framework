@@ -1,6 +1,6 @@
-from abm_framework.abm.agent import AgenteBase
-from abm_framework.abm.world import MundoBase
-from typing import TYPE_CHECKING, Dict, List, Any
+from abm.agent import AgenteBase
+from abm.world import MundoBase
+from typing import List
 
 class AgenteFinanceiro(AgenteBase):
     """

@@ -1,7 +1,6 @@
 from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import TYPE_CHECKING, Dict, List, Callable
-
+from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .agent import AgenteBase
     from .world import MundoBase
