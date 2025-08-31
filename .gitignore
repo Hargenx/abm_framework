@@ -79,3 +79,6 @@ ENV/
 
 # Rope project local_settings        
 .ropeproject
+
+# Resultados da simulação
+resultados.json
