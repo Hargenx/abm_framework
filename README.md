@@ -55,8 +55,8 @@ Para exemplos mais detalhados, consulte a pasta `examples/`.
 - [x] Mundo generalista
 - [x] Paralelização configurável
 - [x] Exportação de dados
-- [x] Exemplo funcional
-- [x] Empacotamento como biblioteca com `setup.py`
-- [x] Pronto para publicar no GitHub ou PyPI 🔥
+- [] Exemplo funcional
+- [] Empacotamento como biblioteca com `setup.py`
+- [] Pronto para publicar no GitHub ou PyPI 🔥
 
 ---
