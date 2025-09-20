@@ -3,7 +3,6 @@ from dataclasses import dataclass
 
 from abm_mercados.core.world import MundoBase
 
-
 @dataclass
 class InvestidorBase:
     id: int

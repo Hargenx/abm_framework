@@ -1,0 +1,25 @@
+environment:
+  cls: mercado_simples           # nome do plugin registrado (ou "abm_mercado.mercados.environments:MercadoSimples")
+  params:
+    preco_inicial: 100
+    ciclos_por_ano: 252
+    k_impacto: 0.02
+    depth: 250
+    seed: 7
+    dy_anual: 0.10
+
+investors:
+  - cls: investidor_fundamentalista
+    params: { id: 1, valor_intrinseco: 120, toler: 0.03, prop: 0.15 }
+  - cls: investidor_fundamentalista
+    params: { id: 2, valor_intrinseco: 100 }
+  - cls: investidor_ruido
+    params: { id: 100, prob_compra: 0.55, max_lote: 4.0 }
+
+steps: 252
+
+output:
+  tag: "FII"
+  dir: "./outputs/fii"
+  plot: true
+  extras: { experimento: "baseline" }

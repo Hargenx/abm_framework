@@ -12,6 +12,8 @@ class Simulacao:
         if n_ciclos is None:
             n_ciclos = 1
         for _ in range(n_ciclos):
+            self.mundo._step_start()
             for inv in self.mundo.investidores:
                 inv.agir(self.mundo)
             self.mundo.atualizar_ambiente()
+            self.mundo._step_end()

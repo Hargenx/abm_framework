@@ -3,20 +3,37 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "abm-mercados"
+name = "abm-mercado"
 version = "0.1.0"
 description = "UM FRAMEWORK BASEADO EM AGENTES PARA SIMULAÇÕES DE INVESTIMENTOS NO MERCADO FINANCEIRO"
-authors = [{name="Raphael M. S. de Jesus"}]
 readme = "README.md"
 requires-python = ">=3.10"
+authors = [{ name = "Raphael M. S. de Jesus" }]
+license = {text = "MIT"}
 dependencies = [
   "numpy>=1.24",
   "pandas>=2.0",
   "matplotlib>=3.7",
   "scipy>=1.11",
+  "pyyaml>=6.0",
   "statsmodels>=0.14",
 ]
 
+# extras opcionais para ML
+[project.optional-dependencies]
+ml = ["torch>=2.2", "gymnasium>=0.29", "stable-baselines3>=2.3"]
+
+[project.scripts]
+abm-mercado = "abm_mercado.cli:main"
+
+# ponto de extensão: plugins de terceiros se registram aqui
+[project.entry-points."abm_mercado.plugins"]
+# o core já publica alguns "referentes" (ex.: ambientes e investidores padrão)
+mercado_simples = "abm_mercado.mercados.environments:MercadoSimples"
+investidor_fundamentalista = "abm_mercado.investidores.fundamentalista:InvestidorFundamentalista"
+investidor_ruido = "abm_mercado.investidores.ruido:InvestidorRuido"
+investidor_tendencia = "abm_mercado.investidores.tecnico:InvestidorTendencia"
+
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["abm_mercados*"]
+include = ["abm_mercado*"]
