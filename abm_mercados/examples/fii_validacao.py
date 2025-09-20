@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from abm import AgenteBase, MundoBase, Simulacao
+from abm_mercados import AgenteBase, MundoBase, Simulacao
 import random, math
 
 # utilitários (compatível: python -m examples.fii_validacao)

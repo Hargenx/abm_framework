@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abm-mercados"
+version = "0.1.0"
+description = "UM FRAMEWORK BASEADO EM AGENTES PARA SIMULAÇÕES DE INVESTIMENTOS NO MERCADO FINANCEIRO"
+authors = [{name="Raphael M. S. de Jesus"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "scipy>=1.11",
+  "statsmodels>=0.14",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["abm_mercados*"]
