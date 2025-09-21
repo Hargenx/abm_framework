@@ -1,5 +1,5 @@
 from examples.market_example import AgenteFinanceiro, MundoMercado
-from abm.simulation import Simulacao
+from abm_mercados.core.simulation import Simulacao
 import unittest
 import sys
 import os
